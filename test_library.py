@@ -40,6 +40,18 @@ class TestBooks(LibraryTestCase):  # US-01 to US-04
         with self.assertRaises(ValueError):
             add_book(self.db, "X", "Y", "9780132350884", "", 1)
 
+    def test_search_books(self):
+        from books import search_books
+        self.assertEqual([b["id"] for b in search_books(self.db, "sommerville")], ["B3"])
+        self.assertEqual(search_books(self.db, "no such book"), [])
+
+    def test_cannot_delete_book_on_loan(self):
+        from books import delete_book
+        from loans import issue_book
+        issue_book(self.db, "M4", "B1")
+        with self.assertRaises(ValueError):
+            delete_book(self.db, "B1")
+
 
 class TestMembers(LibraryTestCase):  # US-05
     def test_add_member_and_reject_duplicate_email(self):

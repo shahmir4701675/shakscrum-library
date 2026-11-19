@@ -8,7 +8,7 @@ A simple Library Management System built in two sprints using Scrum and GitHub P
 | --- | --- | --- |
 | Product Owner (PO) | Mohammad Shahmir | @shahmir4701675 |
 | Scrum Master (SM) | Syed Huzaifa Hasan | @S-Huzaifa |
-| Developer | Arbab Ali | @Arbab7192 |
+| Developer | Arbab Ali | @Arbab719 |
 | Developer | Abdul Kabeer | @abdulkabeer2311 |
 | Stakeholder | Instructor | @Mahn00rMalik |
 
